@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<meta charset="utf-8"/>
 <title> Shashank Sundararaman Resume Website </title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
@@ -25,7 +26,7 @@
 
 <div class="scroll-btn">
 <div class="scroll-bar">
-<a href=""><span> </span></a>
+<a href="#top"><span> </span></a>
 </div>
 </div>
 
@@ -38,21 +39,21 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navigation</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <i class="fas fa-bars"></i>
+    <i class="fa fa-bars"></i>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">HOME</a>
+        <a class="nav-link" href="#top">HOME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ABOUT ME</a>
+        <a class="nav-link" href="#about">ABOUT ME</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">RESUME</a>
+        <a class="nav-link" href="#resume">RESUME</a>
       </li>
 	  <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">CONTACT</a>
+        <a class="nav-link" href="#contact" tabindex="-1" aria-disabled="true">CONTACT</a>
       </li>
     </ul>
   </div>
@@ -66,7 +67,7 @@
 <img src="img/about_me_headshot.jpg" class="profile-img">
 </div>
 <div class="col-md-6 text-center">
-<h3>WHO AM I ? </h3>
+<h3>ABOUT ME</h3>
 <p>
 I am a Developer/Data Engineer with a history of working in the IT space and have 
 completed multiple projects utilizing Python, Java, SQL, HTML/CSS, and Cloud Services, both
@@ -204,7 +205,7 @@ York City Area.
 <ul class="timeline">
 
 <li>
-<h4><b>Applied Plotting, Charting & Data Representation in Python</b></h4>
+<h5><b>Applied Plotting, Charting & Data Representation in Python</b></h5>
 <p>
 <b><i>Issuer</i></b> -  University of Michigan<br>
 <b><i>Issue Date</i></b> - October 2020<br>
@@ -214,15 +215,117 @@ York City Area.
 </p>
 </li>
 
+<li>
+<h5><b>Introduction to Data Science in Python</b></h5>
+<p>
+<b><i>Issuer</i></b> -  University of Michigan<br>
+<b><i>Issue Date</i></b> - September 2020<br>
+<b><i>Expiration Date</i></b> - None<br>
+<b><i>Credential ID</i></b> - 3EM882GFUPXP<br>
+<b><i>Credential Link</i></b> <a href="https://www.coursera.org/account/accomplishments/certificate/3EM882GFUPXP"> - click here to view credential</a> <br>
+</p>
+</li>
+
+<li>
+<h5><b>PolicyCenter 10 Configuration</b></h5>
+<p>
+<b><i>Issuer</i></b> -  Guidewire<br>
+<b><i>Issue Date</i></b> - October 2019<br>
+<b><i>Expiration Date</i></b> - None<br>
+<b><i>Credential ID</i></b> - None<br>
+<b><i>Credential Link</i></b> - None <br>
+</p>
+</li>
+
+<li>
+<h5><b>PolicyCenter 9 Configuration</b></h5>
+<p>
+<b><i>Issuer</i></b> -  Guidewire<br>
+<b><i>Issue Date</i></b> - September 2019<br>
+<b><i>Expiration Date</i></b> - None<br>
+<b><i>Credential ID</i></b> - None<br>
+<b><i>Credential Link</i></b> - None <br>
+</p>
+</li>
+
 </ul>
+</div>
+</div>
+</div>
+</div>
 
+<!---------- JavaScript Clock --------->
+<div class="ille">
+<div class="clock">
+<div class="hour">
+<div class="hr", id="hr"></div>
+</div>
+
+<div class="min">
+<div class="mn", id="mn"></div>
+</div>
+
+<div class="sec">
+<div class="sc", id="sc"></div>
 </div>
 
 </div>
+<script type="text/javascript">
+
+const deg = 6;
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
+
+setInterval(() => {
+	let day = new Date();
+	let hh = day.getHours() * 30;
+	let mm = day.getMinutes() * deg;
+	let ss = day.getSeconds() * deg;
+
+	hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+	mn.style.transform = `rotateZ(${mm}deg)`;
+	sc.style.transform = `rotateZ(${ss}deg)`;
+})
+</script>
+</div>
+
+<div class="contact" id="contact">
+<div class="container text-center">
+<h1>Contact Me</h1>
+<p> Please contact me through the below mediums, thank you for viewing my page!</p>
+<div class="row">
+
+<div class="col-md-4"> 
+<i class='fa fa-phone'></i>
+<p>7325136001</p>
+</div>
+
+<div class="col-md-4"> 
+<i class='fa fa-envelope'></i>
+<p>shanksund@gmail.com</p>
+</div>
+
+<div class="col-md-4"> 
+<i class="fa fa-github-square"></i>
+<a href="https://www.github.com/Shashank-Sund" class='gtlink'><br>www.github.com/Shashank-Sund</a>
+</div>
+</div>
+<button type="button" class="btn btn-primary"> <i class='fa fa-download'></i> Resume</button>
+</div>
+<div class="footer text-center">
+<p></p>
 </div>
 </div>
 
 </section>
+
+<!-------- Smooth Scroll -------->
+<script src="smooth-scroll.js"></script>
+
+<script>
+var scroll = new SmoothScroll('a[href*="#"]');
+</script>
 
 </body>
 </html>
